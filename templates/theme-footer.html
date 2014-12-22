@@ -1,0 +1,47 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='static_content.html'/>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+<%! from datetime import datetime %>
+<%! from pytz import UTC %>
+
+
+<footer>
+    <div class="footbox"><!--foot部分-->
+        <div class="foot">
+            <div class="links fl">
+                <ul>
+                    <li><a href="#"><img src="${static.url('themes/fnst/images/mail.png')}"/></a></li>
+                    <li><a href="#"><img src="${static.url('themes/fnst/images/google.png')}"/></a></li>
+                    <li><a href="#"><img src="${static.url('themes/fnst/images/facebook.png')}"/></a></li>
+                    <li><a href="#"><img src="${static.url('themes/fnst/images/twiter.png')}"/></a></li>
+                    <div class="cl"></div>
+                </ul>
+            </div>
+            <div class="foot_nav fr">
+                <div class="foot_navul">
+                    <dl>
+                        <dd>
+                            <div><span>·</span><a href="${marketing_link('ABOUT')}">サイトについて</a></div>
+                            <div><span>·</span><a href="${marketing_link('TOS')}">${_("Terms of Service")}</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dd>
+                            <div><span>·</span><a href="${marketing_link('CONTACT')}">${_("Contact")}</a></div>
+                            <div><span>·</span><a href="${marketing_link('FAQ')}">${_("FAQ")}</a></div>
+                        </dd>
+                    </dl>
+                    <div class="cl"></div>
+                </div>
+                <div class="foot_copyright">
+                    <span>Certified by JMOOC. Copyright 1995 - 2014 FUJITSU, except where noted, all rights reserved.</span>
+                </div>
+                <div class="nfts"><img src="${static.url('themes/fnst/images/fujitsu.png')}"/></div>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+</footer>
+
